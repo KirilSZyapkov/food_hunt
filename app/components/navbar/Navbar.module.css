@@ -49,4 +49,6 @@
   flex-flow: row nowrap;
   -webkit-box-pack: start;
   justify-content: flex-start;
+  background-color: rgba(33, 37, 41, 0.85);
 }
+

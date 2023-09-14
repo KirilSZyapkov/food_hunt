@@ -4,7 +4,11 @@ import styles from "./Navbar.module.css";
 
 function Navbar() {
   return (
-    <nav className={`flex justify-between items-center w-full p-5 ${styles.custom_navbar, styles.fixed_top, styles.navbar_expand_lg}`}>
+    <nav
+      className={`flex justify-between items-center w-full p-5 ${
+        (styles.custom_navbar, styles.fixed_top, styles.navbar_expand_lg)
+      }`}
+    >
       <div className="flex basis-0 grow items-center">
         <div className="flex items-center gap-5 text-white font-bold text-base">
           <a href="#">Home</a>
