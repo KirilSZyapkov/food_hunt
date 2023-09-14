@@ -32,7 +32,6 @@
 
 .custom_navbar {
     min-height: 140px;
-
 }
 .fixed_top {
     position: fixed;
@@ -42,7 +41,9 @@
     z-index: 1030;
 }
 .navbar_expand_lg {
+    /* background-color: lightgray; */
     position: absolute;
+   
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   flex-flow: row nowrap;
