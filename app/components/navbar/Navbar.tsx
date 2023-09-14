@@ -1,24 +1,29 @@
-import React from 'react'
+import React from "react";
+
+import styles from "./Navbar.module.css";
 
 function Navbar() {
   return (
-    <nav className='bg-current'>
-      <div>
-        <a href='#'>Home</a>
-        <a href='#'>About</a>
-        <a href='#'>Gallery</a>
-        <a href='#'>Book-Table</a>
-      </div>
-      <div>
-        <img className='nav-logo' src='/logo.svg' alt='logo'/>
-      </div>
-      <div>
-      <a href='#'>Blog</a>
-      <a href='#'>Reviews</a>
-      <a href='#'>Contact Us</a>
+    <nav className={`flex justify-between items-center w-full p-4 ${styles.custom_navbar, styles.fixed_top, styles.navbar_expand_lg}`}>
+      <div className="flex basis-0 grow items-center">
+        <div className="bg-red-500">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Gallery</a>
+          <a href="#">Book-Table</a>
+        </div>
+        <a href="#" className={styles.nav_brand}>
+          <img className={styles.nav_logo} src="/logo.svg" alt="logo" />
+          <span className={styles.nav_brand_text}>Food Hunt</span>
+        </a>
+        <div className="bg-red-500">
+          <a href="#">Blog</a>
+          <a href="#">Reviews</a>
+          <a href="#">Contact Us</a>
+        </div>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
