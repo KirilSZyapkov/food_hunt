@@ -1,5 +1,11 @@
+import About from "./components/about/About";
+import Blog from "./components/blog/Blog";
+import BookTable from "./components/bookTable/BookTable";
+import ContactUs from "./components/contactUs/ContactUs";
+import Gallery from "./components/gallery/Gallery";
 import Landing from "./components/landing/Landing";
 import Navbar from "./components/navbar/Navbar";
+import Reviews from "./components/reviews/Reviews";
 
 
 export default function Home() {
@@ -7,6 +13,12 @@ export default function Home() {
     <>
       <Navbar />
       <Landing />
+      <About/>
+      <Gallery/>
+      <BookTable/>
+      <Blog/>
+      <Reviews/>
+      <ContactUs/>
     </>
   );
 }
