@@ -9,12 +9,14 @@
 }
 .nav_brand {
   text-align: center;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  /* padding-top: 0.3125rem; */
+  /* padding-bottom: 0.3125rem; */
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
 }
+
+
 
 .nav_brand_text {
   position: absolute;
@@ -33,22 +35,43 @@
 .custom_navbar {
     min-height: 140px;
 }
+
 .fixed_top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
+
+.afix {
+  min-height: 80px;
+  background-color: #343a40;
+  border-bottom: 1px solid #495057;
+}
+
+.affix_txt {
+  opacity: 1;
+  visibility: visible;
+  bottom: 50%;
+ 
+}
+
+.affix_logo {
+  opacity: 0;
+  visibility: hidden;
+  transform:  translateY(-30px);
+  width: 50px;
+ 
+}
+
 .navbar_expand_lg {
-    /* background-color: lightgray; */
     position: absolute;
    
+    background-color: rgba(33, 37, 41, 0.65);
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   flex-flow: row nowrap;
   -webkit-box-pack: start;
   justify-content: flex-start;
-  background-color: rgba(33, 37, 41, 0.85);
 }
-
