@@ -5,12 +5,12 @@ import styles from "./About.module.css";
 function About() {
   return (
     <section className={styles.about_container}>
-      <div className="flex justify-center mr-[-15px] ml-[-15px]">
-        <div className={styles.about_img}>a</div>
+      <div className="flex justify-center mr-[-15px] ml-[-15px] h-full">
+        <div className={styles.about_img}></div>
         <div className={styles.col_txt}>
           <div className="flex justify-center mr-[-15px] ml-[-15px]">
-            <div>
-              <h2>About Us</h2>
+            <div className="my-5 relative w-full py-[80px] px-[150px]">
+              <h2 className="mb-[1.5rem] text-4xl font-medium mt-0">About Us</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Consectetur, quisquam accusantium nostrum modi, nemo, officia

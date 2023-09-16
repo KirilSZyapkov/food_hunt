@@ -1,9 +1,12 @@
 .about_container{
+    height: 100vh;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-left: auto;
     margin-right: auto;
+    background-color: #343a40;
+    color: white;
 }
 .about_img{
     background: url('/about_section.jpg') no-repeat center center;
@@ -11,9 +14,10 @@
     flex: 0 0 50%;
     max-width: 50%;
     position: relative;
-    width: 100%;
+    /* width: 100%; */
     padding-right: 15px;
     padding-left: 15px;
+    height: 100%;
 }
 
 .col_txt{
