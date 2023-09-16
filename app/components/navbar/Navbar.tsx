@@ -14,7 +14,6 @@ function Navbar() {
         document.documentElement.scrollTop > 80
       ) {
         document.getElementById("navbar")?.classList.add("afix");
-
         document.getElementById("navLogo")?.classList.add("afix_logo");
         document.getElementById("navTxt")?.classList.add("afix_txt");
         console.log("a");
@@ -35,10 +34,10 @@ function Navbar() {
     >
       <div className="flex basis-0 grow items-center">
         <div className="flex items-center gap-5 text-white font-bold text-base">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Gallery</a>
-          <a href="#">Book-Table</a>
+          <a className={styles.link} href="#">Home</a>
+          <a className={styles.link} href="#">About</a>
+          <a className={styles.link} href="#">Gallery</a>
+          <a className={styles.link} href="#">Book-Table</a>
         </div>
         <a href="#" className={styles.nav_brand}>
           <img
@@ -52,9 +51,9 @@ function Navbar() {
           </span>
         </a>
         <div className="flex items-center gap-5 text-white font-bold text-base">
-          <a href="#">Blog</a>
-          <a href="#">Reviews</a>
-          <a href="#">Contact Us</a>
+          <a className={styles.link} href="#">Blog</a>
+          <a className={styles.link} href="#">Reviews</a>
+          <a className={styles.link} href="#">Contact Us</a>
         </div>
       </div>
     </nav>

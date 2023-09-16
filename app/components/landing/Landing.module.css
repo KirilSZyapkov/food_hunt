@@ -4,5 +4,8 @@
     background: url('/main.jpg') no-repeat center center fixed;
     background-size: cover;
     min-height: 750px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
