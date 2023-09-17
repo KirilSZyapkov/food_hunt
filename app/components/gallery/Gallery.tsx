@@ -1,17 +1,18 @@
 import React from "react";
+import styles from './Gallery.module.css';
 
 function Gallery() {
   return (
-    <section>
-      <div>
-        <h2>OUR MENU</h2>
+    <>
+      <div className="text-center bg-[#343a40] text-[#f8f9fa] min-h-[300px] flex flex-col justify-center">
+        <h2 className="text-7xl mb-2 font-medium mt-0">OUR MENU</h2>
       </div>
-      <form>
-        <input />
-        <button><i className="uil uil-search"></i></button>
+      <form className={`${styles.form} bg-[#343a40] text-center`}>
+        <input type="text" placeholder="Search.." name="search" />
+        <button className={styles.search_btn} type="submit"><i className="uil uil-search text-xl"></i></button>
       </form>
       <div></div>
-    </section>
+    </>
   );
 }
 
