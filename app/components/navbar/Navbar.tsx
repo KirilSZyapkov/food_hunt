@@ -16,9 +16,9 @@ function Navbar() {
         document.getElementById("navbar")?.classList.add("afix");
         document.getElementById("navLogo")?.classList.add("afix_logo");
         document.getElementById("navTxt")?.classList.add("afix_txt");
-        console.log("a");
+        
       } else {
-        console.log("b");
+        
         document.getElementById("navbar")?.classList.remove("afix");
 
         document.getElementById("navLogo")?.classList.remove("afix_logo");

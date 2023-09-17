@@ -1,7 +1,13 @@
 import React from "react";
 import styles from "./Gallery.module.css";
+import { fetchRecipes } from "@/service";
 
-function Gallery() {
+async function Gallery() {
+
+  const someRecipies = await fetchRecipes();
+  console.log(someRecipies);
+  
+
   return (
     <>
       <div className="text-center bg-[#343a40] text-[#f8f9fa] min-h-[300px] flex flex-col justify-center">
