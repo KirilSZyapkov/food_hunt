@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './Gallery.module.css';
+import styles from "./Gallery.module.css";
 
 function Gallery() {
   return (
@@ -9,9 +9,28 @@ function Gallery() {
       </div>
       <form className={`${styles.form} bg-[#343a40] text-center`}>
         <input type="text" placeholder="Search.." name="search" />
-        <button className={styles.search_btn} type="submit"><i className="uil uil-search text-xl"></i></button>
+        <button className={styles.search_btn} type="submit">
+          <i className="uil uil-search text-xl"></i>
+        </button>
       </form>
-      <div></div>
+      <div className="flex flex-wrap">
+        <div className={styles.card}>
+          <img src="/gallary_1.jpg" alt="recepie" />
+          <a href="#">link</a>
+        </div>
+        <div className={styles.card}>
+          <img src="/gallary_2.jpg" alt="recepie" />
+          <a href="#">link</a>
+        </div>
+        <div className={styles.card}>
+          <img src="/gallary_3.jpg" alt="recepie" />
+          <a href="#">link</a>
+        </div>
+        <div className={styles.card}>
+          <img src="/gallary_4.jpg" alt="recepie" />
+          <a href="#">link</a>
+        </div>
+      </div>
     </>
   );
 }
