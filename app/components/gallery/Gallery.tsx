@@ -3,10 +3,8 @@ import styles from "./Gallery.module.css";
 import { fetchRecipes } from "@/service";
 
 async function Gallery() {
-
   const someRecipies = await fetchRecipes();
   console.log(someRecipies);
-  
 
   return (
     <>
@@ -20,22 +18,12 @@ async function Gallery() {
         </button>
       </form>
       <div className="flex flex-wrap">
-        <div className={styles.card}>
-          <img src="/gallary_1.jpg" alt="recepie" />
-          <a href="#">link</a>
-        </div>
-        <div className={styles.card}>
-          <img src="/gallary_2.jpg" alt="recepie" />
-          <a href="#">link</a>
-        </div>
-        <div className={styles.card}>
-          <img src="/gallary_3.jpg" alt="recepie" />
-          <a href="#">link</a>
-        </div>
-        <div className={styles.card}>
-          <img src="/gallary_4.jpg" alt="recepie" />
-          <a href="#">link</a>
-        </div>
+        {someRecipies?.results.map((it:any) => (
+          <div className={styles.card}>
+            <img src={it.thumbnail_url} alt="recepie" />
+            <a href="#">link</a>
+          </div>
+        ))}
       </div>
     </>
   );
