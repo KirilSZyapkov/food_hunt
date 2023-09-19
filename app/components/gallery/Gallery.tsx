@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Gallery.module.css";
 import { fetchRecipes } from "@/service";
+import Link from "next/link";
 
 async function Gallery() {
   const someRecipies = await fetchRecipes();
-  console.log(someRecipies);
-
+  
   return (
     <>
       <div className="text-center bg-[#343a40] text-[#f8f9fa] min-h-[300px] flex flex-col justify-center">
@@ -18,11 +18,10 @@ async function Gallery() {
         </button>
       </form>
       <div className="flex flex-wrap">
-        {someRecipies?.results.map((it:any) => (
-          <div className={styles.card}>
-            <img src={it.thumbnail_url} alt="recepie" />
-            <a href="#">link</a>
-          </div>
+        {someRecipies?.results.map((it: any) => (
+          <Link href={`${it.id}`} className={styles.card}>
+              <img src={it.thumbnail_url} alt="recepie" />
+          </Link>
         ))}
       </div>
     </>

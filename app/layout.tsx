@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Head from "next/head";
+import Navbar from "./components/navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,8 +23,10 @@ export default function RootLayout({
           href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
         />
       </head>
-
-      <body className={inter.className}>{children}</body>
+      <>
+        <Navbar />
+        <body className={inter.className}>{children}</body>
+      </>
     </html>
   );
 }
