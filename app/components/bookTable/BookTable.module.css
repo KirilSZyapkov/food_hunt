@@ -1,5 +1,6 @@
 .book_table{
     width: 100%;
+    position: relative;
     padding: 0 15px;
     margin: 0 auto;
     text-align: center;
@@ -9,5 +10,65 @@
     justify-content: center;
     align-items: center;
     min-height: 500px;
-    background-color: red;
+    /* background-color: red; */
+}
+
+.book_table::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/book_table_img.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.book_table::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #343a40;
+    z-index: -2;
+}
+
+.book_table_form{
+    margin-bottom: 3rem;
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin: 0 15px;
+    text-align: center;
+}
+
+.row_input{
+    margin: 0.5rem 0;
+    position: relative;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.row_form_input{
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 0;
+    height: calc(1.5em + 1.6rem + 2px);
+    padding: 0.8rem 1.6rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+}
+
+.row_input input{
+    /* width: 150px; */
+    overflow: visible;
+    margin: 0;
+    font-family: inherit;
 }

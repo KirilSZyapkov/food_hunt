@@ -4,36 +4,31 @@ import styles from "./BookTable.module.css";
 function BookTable() {
   return (
     <section className={styles.book_table}>
-      <div>
-        <h2>BOOK A TABLE</h2>
+      <div className="w-full px-[120px]">
+        <h2 className="text-7xl mb-12 font-medium">BOOK A TABLE</h2>
         <form className={styles.book_table_form}>
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter email"
-            name="email"
-          />
-
-          <input
-            type="number"
-            id="number"
-            placeholder="Number of Guests"
-            name="number_guests"
-          />
-
-          <input
-            type="time"
-            id="time"
-            placeholder="--:-- --"
-            name="time"
-          />
-
-          <input
-            type="date"
-            id="date"
-            placeholder="mm/dd/yyyy"
-            name="date"
-          />
+          <div className={styles.row_input}>
+            <input className={styles.row_form_input}
+              type="email"
+              id="email"
+              placeholder="Enter email"
+              name="email"
+            />
+          </div>
+          <div className={styles.row_input}>
+            <input className={styles.row_form_input}
+              type="number"
+              id="number"
+              placeholder="Number of Guests"
+              name="number_guests"
+            />
+          </div>
+          <div className={styles.row_input}>
+            <input className={styles.row_form_input} type="time" id="time" placeholder="--:-- --" name="time" />
+          </div>
+          <div className={styles.row_input}>
+            <input className={styles.row_form_input} type="date" id="date" placeholder="mm/dd/yyyy" name="date" />
+          </div>
         </form>
         <button>BOOK</button>
       </div>
