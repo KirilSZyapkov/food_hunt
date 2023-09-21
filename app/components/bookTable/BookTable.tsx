@@ -30,7 +30,7 @@ function BookTable() {
             <input className={styles.row_form_input} type="date" id="date" placeholder="mm/dd/yyyy" name="date" />
           </div>
         </form>
-        <button>BOOK</button>
+        <button className="inline font-normal text-center select-none  border-transperent text-white bg-[#ff214f] px-[1.1rem] py-[1.2rem] text-3xl mt-[2.6rem]">BOOK TABLE</button>
       </div>
     </section>
   );
