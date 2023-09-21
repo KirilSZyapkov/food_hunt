@@ -17,7 +17,7 @@ async function Gallery() {
           <i className="uil uil-search text-xl"></i>
         </button>
       </form>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap bg-[#343a40]">
         {someRecipies?.results.map((it: any) => (
           <Link href={`${it.id}`} className={styles.card} key={it.id}>
             <div className={styles.overlay}>
