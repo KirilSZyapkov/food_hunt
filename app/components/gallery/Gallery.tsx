@@ -5,7 +5,7 @@ import Link from "next/link";
 
 async function Gallery() {
   const someRecipies = await fetchRecipes();
-  
+
   return (
     <>
       <div className="text-center bg-[#343a40] text-[#f8f9fa] min-h-[300px] flex flex-col justify-center">
@@ -19,7 +19,10 @@ async function Gallery() {
       </form>
       <div className="flex flex-wrap">
         {someRecipies?.results.map((it: any) => (
-          <Link href={`${it.id}`} className={styles.card}>
+          <Link href={`${it.id}`} className={styles.card} key={it.id}>
+            <div className={styles.overlay}>
+              <span className="text-4xl text-red">&times;</span>
+            </div>
               <img src={it.thumbnail_url} alt="recepie" />
           </Link>
         ))}

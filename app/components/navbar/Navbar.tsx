@@ -28,7 +28,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav
+    <header
       id="navbar"
       className={`flex justify-between items-center w-full p-5 ${styles.custom_navbar} ${styles.fixed_top} ${styles.navbar_expand_lg}`}
     >
@@ -56,7 +56,7 @@ function Navbar() {
           <a className={styles.link} href="#">Contact Us</a>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
 
