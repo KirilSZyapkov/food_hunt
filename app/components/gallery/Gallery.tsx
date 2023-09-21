@@ -21,7 +21,7 @@ async function Gallery() {
         {someRecipies?.results.map((it: any) => (
           <Link href={`${it.id}`} className={styles.card} key={it.id}>
             <div className={styles.overlay}>
-              <span className="text-4xl text-red">&times;</span>
+              <span className="text-8xl text-slate-50">&#43;</span>
             </div>
               <img src={it.thumbnail_url} alt="recepie" />
           </Link>
