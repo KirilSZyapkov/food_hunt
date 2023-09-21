@@ -1,12 +1,7 @@
-import React from 'react';
+import React from "react";
 
-function recipe({params}: any) {
-
-  console.log(params);
-  
-  return (
-    <div>{params.id}</div>
-  )
+function recipe({ params }: any) {
+  return <div>{params.id}</div>;
 }
 
-export default recipe
+export default recipe;
