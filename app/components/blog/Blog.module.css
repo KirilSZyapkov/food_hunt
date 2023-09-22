@@ -8,7 +8,7 @@
   overflow: hidden;
   margin: 10px;
   min-width: 250px;
-  max-width: 310px;
+  /* max-width: 510px; */
   width: 100%;
   background-color: #000000;
   color: #ffffff;
@@ -55,6 +55,10 @@
   margin: 0;
   font-style: italic;
   font-size: 1.2em;
+}
+
+.description{
+    overflow: auto;
 }
 
 .snip1574 h3 {
