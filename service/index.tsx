@@ -17,5 +17,24 @@ export async function fetchRecipes() {
   } catch (error) {
     console.error(error);
   }
- 
+}
+
+export async function fetchFeeds() {
+  const url =
+    "https://tasty.p.rapidapi.com/feeds/list?size=10&timezone=%2B0700&vegetarian=false&from=1";
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "2398b9f22emshef5491088782044p16bf06jsn430e9585cd66",
+      "X-RapidAPI-Host": "tasty.p.rapidapi.com",
+    },
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error(error);
+  }
 }
