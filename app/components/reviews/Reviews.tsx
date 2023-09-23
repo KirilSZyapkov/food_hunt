@@ -8,8 +8,8 @@ function Reviews() {
       <div className={styles.row}>
         <div className={styles.col}>
           <div className="relative text-center">
-            <h3>John Doe</h3>
-            <h6>Web Designer</h6>
+            <h3 className="font-medium mb-[0.5rem] text-3xl">John Doe</h3>
+            <h6 className="text-[0.8rem] tracking-wide opacity-90 font-medium mb-[0.5rem]">Web Designer</h6>
             <div>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum
@@ -22,8 +22,8 @@ function Reviews() {
 
         <div className={styles.col}>
           <div className="relative text-center">
-            <h3>Steve Thomas</h3>
-            <h6>Painter</h6>
+            <h3 className="font-medium mb-[0.5rem] text-3xl">Steve Thomas</h3>
+            <h6 className="text-[0.8rem] tracking-wide opacity-90 font-medium mb-[0.5rem]">Painter</h6>
             <div>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum
@@ -36,8 +36,8 @@ function Reviews() {
 
         <div className={styles.col}>
           <div className="relative text-center">
-            <h3>Miranda Joy</h3>
-            <h6>Musition</h6>
+            <h3 className="font-medium mb-[0.5rem] text-3xl">Miranda Joy</h3>
+            <h6 className="text-[0.8rem] tracking-wide opacity-90 font-medium mb-[0.5rem]">Musition</h6>
             <div>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum
