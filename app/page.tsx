@@ -10,7 +10,6 @@ import Reviews from "./components/reviews/Reviews";
 export default function Home() {
   return (
     <>
-      
       <Landing />
       <About/>
       <Gallery/>
