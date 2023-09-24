@@ -23,7 +23,7 @@ async function Gallery() {
             <div className={styles.overlay}>
               <span className="text-8xl text-slate-50">&#43;</span>
             </div>
-              <img src={it.thumbnail_url} alt="recepie" />
+            <img src={it.thumbnail_url} alt="recepie" />
           </Link>
         ))}
       </div>

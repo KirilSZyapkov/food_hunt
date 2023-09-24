@@ -10,4 +10,21 @@
     position: relative;
     width: 100%;
     padding: 0 15px;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+
+.body::after{
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 55%;
+    width: 24px;
+    height: 24px;
+    border: solid;
+    border-color: #ff214f;
+    border-radius: 0.2rem 0 0 0;
+    border-width: 2px 0 0 2px;
+    transform: rotate(45deg) translateX(-50px);
+    background: #343a40;
 }

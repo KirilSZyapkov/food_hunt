@@ -5,9 +5,6 @@ import { fetchFeeds } from "@/service";
 async function Blog() {
   const feeds = await fetchFeeds();
 
-  console.log(feeds.results);
-  
-
   return (
     <section className="text-center bg-[#343a40] py-[20px]">
       <h1 className="text-7xl text-white py-16">EVENTS AT THE FOOD HUT</h1>
