@@ -9,3 +9,10 @@
     height: 350px;
     /* border: 1px solid yellow; */
 }
+
+.contat_cards{
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
