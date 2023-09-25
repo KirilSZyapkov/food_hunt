@@ -29,9 +29,9 @@ function Navbar() {
   return (
     <header
       id="navbar"
-      className={`flex justify-between items-center w-full p-5 ${styles.custom_navbar} ${styles.fixed_top} ${styles.navbar_expand_lg}`}
+      className={styles.header_menu}
     >
-      <div className="flex basis-0 grow items-center">
+      <div className={styles.header_container}>
         <div className="flex items-center gap-5 text-white font-bold text-base">
           <a className={styles.link} href="#">Home</a>
           <a className={styles.link} href="#">About</a>
@@ -54,6 +54,9 @@ function Navbar() {
           <a className={styles.link} href="#">Reviews</a>
           <a className={styles.link} href="#">Contact Us</a>
         </div>
+      </div>
+      <div className={styles.header_burger_menu}>
+    burger
       </div>
     </header>
   );
