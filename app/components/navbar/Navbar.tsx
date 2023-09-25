@@ -13,14 +13,13 @@ function Navbar() {
         document.body.scrollTop > 80 ||
         document.documentElement.scrollTop > 80
       ) {
-        document.getElementById("navbar")?.classList.add("afix");
+        document.getElementById("navbar")?.classList.add('afix');
         document.getElementById("navLogo")?.classList.add("afix_logo");
         document.getElementById("navTxt")?.classList.add("afix_txt");
         
       } else {
         
         document.getElementById("navbar")?.classList.remove("afix");
-
         document.getElementById("navLogo")?.classList.remove("afix_logo");
         document.getElementById("navTxt")?.classList.remove("afix_txt");
       }

@@ -1,18 +1,3 @@
-.affix_txt {
-  opacity: 1 !important;
-  visibility: visible !important;
-  bottom: 50% !important;
- 
-}
-
-.affix_logo {
-  opacity: 0;
-  visibility: hidden;
-  transform:  translateY(-30px);
-  width: 50px;
- 
-}
-
 .nav_brand,
 .nav_logo {
   width: 110px;
@@ -48,12 +33,6 @@
     min-height: 140px;
 }
 
-.afix {
-  min-height: 80px;
-  background-color: #343a40;
-  border-bottom: 1px solid #495057;
-}
-
 .fixed_top {
   position: fixed;
   top: 0;
@@ -61,10 +40,6 @@
   left: 0;
   z-index: 1030;
 }
-
-
-
-
 
 .navbar_expand_lg {
    background-color: rgba(33, 37, 41, 0.65);
@@ -77,4 +52,25 @@
 
 .link:hover, .link:focus{
   color: #ff214f;
+}
+
+.afix {
+  min-height: 80px;
+  background-color: #343a40;
+  border-bottom: 1px solid #495057;
+}
+
+.affix_txt {
+  opacity: 1 !important;
+  visibility: visible !important;
+  bottom: 50% !important;
+ 
+}
+
+.affix_logo {
+  opacity: 0;
+  visibility: hidden;
+  transform:  translateY(-30px);
+  width: 50px;
+ 
 }
