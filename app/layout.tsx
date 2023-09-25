@@ -25,11 +25,11 @@ export default function RootLayout({
         />
       </head>
 
-      {/* <Navbar /> */}
+      <Navbar />
       
         <body className={inter.className}>{children}</body>
     
-      {/* <Footer /> */}
+      <Footer />
     </html>
   );
 }

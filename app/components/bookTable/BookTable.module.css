@@ -40,7 +40,7 @@
 .book_table_form{
     margin-bottom: 3rem;
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     margin: 0 15px;
     text-align: center;
 }
