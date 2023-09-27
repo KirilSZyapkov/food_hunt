@@ -5,9 +5,9 @@ import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 
 function Navbar() {
-  const [afix, setAfix] = useState("");
-  const [afixLogo, setAfixLogo] = useState("");
-  const [afixTxt, setAfixTxt] = useState("");
+  const [afix, setAfix] = useState(false);
+  const [afixLogo, setAfixLogo] = useState(false);
+  const [afixTxt, setAfixTxt] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", scrollFunction);
@@ -21,18 +21,18 @@ function Navbar() {
       document.body.scrollTop > 80 ||
       document.documentElement.scrollTop > 80
     ) {
-      setAfix("afix");
-      setAfixLogo("afix_logo");
-      setAfixTxt("afix_txt");
+      setAfix(true);
+      setAfixLogo(true);
+      setAfixTxt(true);
     } else {
-      setAfix("");
-      setAfixLogo("");
-      setAfixTxt("");
+      setAfix(false);
+      setAfixLogo(false);
+      setAfixTxt(false);
     }
   }
 
   return (
-    <header className={`${afix} ${styles.header_menu}`}>
+    <header className={`${styles.header_menu} ${(afix ? styles.afix : "")}`}>
       <div className={styles.header_container}>
         <div className="flex items-center gap-5 font-bold text-base">
           <a className={styles.link} href="#">
@@ -51,11 +51,11 @@ function Navbar() {
         <a href="#" className={styles.nav_brand}>
           <img
             id="navLogo"
-            className={styles.nav_logo}
+            className={`${styles.nav_logo} ${(afixLogo? styles.afix_logo : "")}`}
             src="./logo.svg"
             alt="logo"
           />
-          <span id="navTxt" className={styles.nav_brand_text}>
+          <span id="navTxt" className={`${styles.nav_brand_text} ${afixTxt? styles.afix_txt : ""}`}>
             Food Hunt
           </span>
         </a>
