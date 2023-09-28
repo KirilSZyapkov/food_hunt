@@ -9,7 +9,7 @@ function About() {
         <div className={styles.about_img}></div>
         <div className={styles.col_txt}>
           <div className="flex justify-center mr-[-15px] ml-[-15px]">
-            <div className="my-5 relative w-full py-[80px] px-[150px]">
+            <div className={`my-5 relative w-full py-[80px] px-[150px] ${styles.col_tex_mob}`}>
               <h2 className="mb-[1.5rem] text-4xl font-medium mt-0">About Us</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.

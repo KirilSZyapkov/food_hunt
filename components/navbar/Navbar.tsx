@@ -96,7 +96,7 @@ function Navbar() {
           <li className="text-medium text-xl py-[10px]"><a className={styles.link} href="#">            Reviews          </a></li>
           <li className="text-medium text-xl py-[10px]"><a className={styles.link} href="#">            Contact Us          </a></li>
         </ul>
-        <span className="text-4xl fixed right-5 top-1 cursor-pointer" onClick={closeMenu}>&times;</span>
+        <span className="text-4xl fixed right-5 top-1 cursor-pointer hover:text-red-500" onClick={closeMenu}>&times;</span>
       </div>}
     </header>
   );

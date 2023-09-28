@@ -24,6 +24,7 @@
   align-items: center;
   padding: 0 50px;
   /* display: none; */
+  width: 100%;
 }
 
 .header_burger_menu_container {
@@ -73,14 +74,7 @@
   transition: all 0.2s linear 0s;
 }
 
-@media (max-width: 830px) {
-  .nav_brand{
-    display: none;
-  }
-  .header_menu{
-    display: flex;
-  }
-}
+
 
 @media (max-width: 700px) {
   .header_container{
@@ -101,5 +95,14 @@
 
   .custom_navbar {
     min-height: 80px;
+  }
+}
+
+@media (max-width: 830px) {
+  .nav_brand{
+    display: none;
+  }
+  .header_menu{
+    display: flex;
   }
 }
