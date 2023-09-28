@@ -15,7 +15,7 @@
   background-color: #343a40;
   border-bottom: 1px solid #495057;
   min-height: 80px;
-  transition: all 0.2s linear 0s;
+  /* transition: all 0.2s linear 0s; */
 }
 
 .header_container {

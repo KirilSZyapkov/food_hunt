@@ -40,7 +40,7 @@
 .book_table_form{
     margin-bottom: 3rem;
     display: flex;
-    /* flex-wrap: wrap; */
+    
     margin: 0 15px;
     text-align: center;
 }
@@ -71,4 +71,17 @@
     overflow: visible;
     margin: 0;
     font-family: inherit;
+}
+
+@media (max-width: 1200px){
+    .book_container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 992px){
+    .book_table_form{
+        flex-wrap: wrap;
+    }
 }
