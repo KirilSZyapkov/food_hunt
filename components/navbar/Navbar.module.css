@@ -1,6 +1,4 @@
-
-
-.header_menu{
+.header_menu {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
@@ -10,7 +8,7 @@
   color: white;
   /* padding: 0 25px; */
   transition: all 0.2s linear 0s;
-
+  min-height: 80px;
 }
 
 .afix {
@@ -18,7 +16,6 @@
   border-bottom: 1px solid #495057;
   min-height: 80px;
   transition: all 0.2s linear 0s;
-  
 }
 
 .header_container {
@@ -26,63 +23,83 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
+  /* display: none; */
+}
+
+.header_burger_menu_container {
+  display: none;
+  position: relative;
+  background-color: #343a40;
+  width: 100%;
+}
+
+.header_burger_menu {
+  padding: 0 10px;
+}
+
+.menu{
   display: none;
 }
 
-
-.header_burger_menu_container{
- /* display: none; */
- position: relative;
- background-color: #343a40;
+.link:hover {
+  color: #ff214f;
+}
+.nav_brand {
+  padding: 1.25rem 0;
+  font-size: 1.25rem;
+  white-space: nowrap;
 }
 
-.link:hover{
-color: #ff214f;
+.nav_logo {
+  width: 130px;
+  transition: all 0.2s linear 0s;
 }
-.nav_brand{
- padding: 1.25rem 0;
- font-size: 1.25rem;
- white-space: nowrap;
-}
-
-.nav_logo{
-width: 130px;
-transition: all 0.2s linear 0s;
-
-
-}
-.afix_logo{
+.afix_logo {
   display: none;
   transition: all 0.2s linear 0s;
 }
 
-
-.nav_brand_text{
+.nav_brand_text {
   display: none;
   font-weight: bold;
   font-size: 2.5rem;
   color: #ff214f;
   font-family: "Oswald", sans-serif;
   transition: all 0.2s linear 0s;
- 
 }
 
-.afix_txt{
+.afix_txt {
   display: block;
   transition: all 0.2s linear 0s;
-
 }
 
+@media (max-width: 830px) {
+  .nav_brand{
+    display: none;
+  }
+  .header_menu{
+    display: flex;
+  }
+}
 
 @media (max-width: 700px) {
-  
-  .header_men{
-    padding: 0;
+  .header_container{
+    display: none;
+  }
 
+  .header_burger_menu_container{
+    display: block;
+  }
+
+  .menu{
+    display: block;
+  }
+
+  .header_men {
+    padding: 0;
   }
 
   .custom_navbar {
     min-height: 80px;
   }
-
 }
