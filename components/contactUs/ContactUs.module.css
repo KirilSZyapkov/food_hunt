@@ -16,3 +16,10 @@
     justify-content: space-evenly;
     margin-bottom: 15px;
 }
+
+@media (max-width: 660px){
+    .contat_cards{
+        flex-direction: column;
+        gap: 40px;
+    }
+}

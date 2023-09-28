@@ -51,7 +51,7 @@ function ContactUs() {
         <div className="flex flex-col">
           <div className="flex flex-col text-center">
             <h3 className="text-7xl text-center my-[3rem] font-medium">FIND US</h3>
-            <p className="text-start mb-[25px]">
+            <p className="text-start mb-[25px] py-[40px]">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit,
               laboriosam doloremque odio delectus, sunt magnam laborum impedit
               molestiae, magni quae ipsum, ullam eos! Alias suscipit impedit et,

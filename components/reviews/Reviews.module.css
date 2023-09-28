@@ -11,7 +11,7 @@
     width: 100%;
     padding: 0 15px;
     flex: 0 0 33.33333%;
-    max-width: 33.33333%;
+    
 }
 
 .body::after{
@@ -28,3 +28,9 @@
     transform: rotate(45deg) translateX(-50px);
     background: #343a40;
 }
+
+@media (max-width: 830px) {
+    .row{
+        flex-direction: column;
+    }
+  }
