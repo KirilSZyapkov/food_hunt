@@ -44,20 +44,20 @@ function Navbar() {
     <header className={`${styles.header_menu} ${afix ? styles.afix : ""}`}>
       <div className={styles.header_container}>
         <div className="flex items-center gap-5 font-bold text-base">
-          <a className={styles.link} href="#">
+          <a className={styles.link} href="/">
             Home
           </a>
-          <a className={styles.link} href="#">
+          <a className={styles.link} href="#about">
             About
           </a>
-          <a className={styles.link} href="#">
+          <a className={styles.link} href="#gallery">
             Gallery
           </a>
-          <a className={styles.link} href="#">
+          <a className={styles.link} href="#book_table">
             Book-Table
           </a>
         </div>
-        <a href="#" className={styles.nav_brand}>
+        <a href="/" className={styles.nav_brand}>
           <img
             id="navLogo"
             className={`${styles.nav_logo} ${afixLogo ? styles.afix_logo : ""}`}
@@ -69,18 +69,19 @@ function Navbar() {
             className={`${styles.nav_brand_text} ${
               afixTxt ? styles.afix_txt : ""
             }`}
+            onClick={()=> {window.scrollTo(0, 0)}}
           >
             Food Hunt
           </span>
         </a>
         <div className="flex items-center gap-5 text-white font-bold text-base">
-          <a className={styles.link} href="#">
+          <a className={styles.link} href="#blog">
             Blog
           </a>
-          <a className={styles.link} href="#">
+          <a className={styles.link} href="#reviews">
             Reviews
           </a>
-          <a className={styles.link} href="#">
+          <a className={styles.link} href="#contact_us">
             Contact Us
           </a>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import SetionWrapper from "@/hoc/SetionWrapper";
 
 import styles from "./About.module.css";
 
@@ -48,4 +49,4 @@ function About() {
   );
 }
 
-export default About;
+export default SetionWrapper(About, "about");

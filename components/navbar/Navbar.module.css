@@ -83,6 +83,8 @@
 
   .header_burger_menu_container{
     display: block;
+  transition: display 2s linear 0s;
+
   }
 
   .menu{
