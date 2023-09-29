@@ -46,7 +46,7 @@ function ContactUs() {
   }, []);
 
   return (
-    <section className="w-full min-h-[300px] flex flex-wrap flex-coll justify-center bg-[#343a40] text-white border-t border-t-[#495057] px-[15px] mx-auto texte-center">
+    <section id="contact_us" className="w-full min-h-[300px] flex flex-wrap flex-coll justify-center bg-[#343a40] text-white border-t border-t-[#495057] px-[15px] mx-auto texte-center">
       <div>
         <div className="flex flex-col">
           <div className="flex flex-col text-center">

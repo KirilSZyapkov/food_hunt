@@ -6,7 +6,7 @@ async function Blog() {
   const feeds = await fetchFeeds();
 
   return (
-    <section className="text-center bg-[#343a40] py-[20px]">
+    <section className="text-center bg-[#343a40] py-[20px]" id="blog">
       <h1 className="text-7xl text-white py-16">EVENTS AT THE FOOD HUT</h1>
       <div className={styles.carosel}>
         {feeds.results.map((f: any) => (

@@ -8,7 +8,7 @@ async function Gallery() {
 
   return (
     <>
-      <div className="text-center bg-[#343a40] text-[#f8f9fa] min-h-[300px] flex flex-col justify-center">
+      <div className="text-center bg-[#343a40] text-[#f8f9fa] min-h-[300px] flex flex-col justify-center" id="gallery">
         <h2 className="text-7xl mb-2 font-medium mt-0">OUR MENU</h2>
       </div>
       <form className={`${styles.form} bg-[#343a40] text-center`}>

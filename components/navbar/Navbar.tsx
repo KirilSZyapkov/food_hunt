@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 
 import styles from "./Navbar.module.css";
+import Link from "next/link";
 
 function Navbar() {
   const [afix, setAfix] = useState(false);
@@ -12,7 +13,7 @@ function Navbar() {
 
   function closeMenu(): void {
     setIsOpen(false);
-  };
+  }
 
   function openMenu(): void {
     setIsOpen(true);
@@ -44,20 +45,20 @@ function Navbar() {
     <header className={`${styles.header_menu} ${afix ? styles.afix : ""}`}>
       <div className={styles.header_container}>
         <div className="flex items-center gap-5 font-bold text-base">
-          <a className={styles.link} href="/">
+          <Link className={styles.link} href="/">
             Home
-          </a>
-          <a className={styles.link} href="#about">
+          </Link>
+          <Link className={styles.link} href="#about">
             About
-          </a>
-          <a className={styles.link} href="#gallery">
+          </Link>
+          <Link className={styles.link} href="#gallery">
             Gallery
-          </a>
-          <a className={styles.link} href="#book_table">
+          </Link>
+          <Link className={styles.link} href="#book_table">
             Book-Table
-          </a>
+          </Link>
         </div>
-        <a href="/" className={styles.nav_brand}>
+        <Link href="/" className={styles.nav_brand}>
           <img
             id="navLogo"
             className={`${styles.nav_logo} ${afixLogo ? styles.afix_logo : ""}`}
@@ -69,36 +70,84 @@ function Navbar() {
             className={`${styles.nav_brand_text} ${
               afixTxt ? styles.afix_txt : ""
             }`}
-            onClick={()=> {window.scrollTo(0, 0)}}
           >
             Food Hunt
           </span>
-        </a>
+        </Link>
         <div className="flex items-center gap-5 text-white font-bold text-base">
-          <a className={styles.link} href="#blog">
+          <Link className={styles.link} href="#blog">
             Blog
-          </a>
-          <a className={styles.link} href="#reviews">
+          </Link>
+          <Link className={styles.link} href="#reviews">
             Reviews
-          </a>
-          <a className={styles.link} href="#contact_us">
+          </Link>
+          <Link className={styles.link} href="#contact_us">
             Contact Us
-          </a>
+          </Link>
         </div>
       </div>
-     {isOpen? "" : <i className={`uil uil-bars text-4xl pl-2 mt-5 cursor-pointer text-gray-400 ${styles.menu}`} onClick={openMenu}></i>}
-      {isOpen && <div className={styles.header_burger_menu_container}>
-        <ul className={styles.header_burger_menu}>
-          <li className="text-medium text-xl py-[10px]"><a className={styles.link} href="#">            Home          </a></li>
-          <li className="text-medium text-xl py-[10px]"><a className={styles.link} href="#">            About          </a></li>
-          <li className="text-medium text-xl py-[10px]"><a className={styles.link} href="#">            Gallery          </a></li>
-          <li className="text-medium text-xl py-[10px]"><a className={styles.link} href="#">            Book-Table          </a></li>
-          <li className="text-medium text-xl py-[10px]"><a className={styles.link} href="#">            Blog          </a></li>
-          <li className="text-medium text-xl py-[10px]"><a className={styles.link} href="#">            Reviews          </a></li>
-          <li className="text-medium text-xl py-[10px]"><a className={styles.link} href="#">            Contact Us          </a></li>
-        </ul>
-        <span className="text-4xl fixed right-5 top-1 cursor-pointer hover:text-red-500" onClick={closeMenu}>&times;</span>
-      </div>}
+      {isOpen ? (
+        ""
+      ) : (
+        <i
+          className={`uil uil-bars text-4xl pl-2 mt-5 cursor-pointer text-gray-400 ${styles.menu}`}
+          onClick={openMenu}
+        ></i>
+      )}
+      {isOpen && (
+        <div className={styles.header_burger_menu_container}>
+          <ul className={styles.header_burger_menu}>
+            <li className="text-medium text-xl py-[10px]">
+              <Link onClick={closeMenu} className={styles.link} href="/">
+                {" "}
+                Home{" "}
+              </Link>
+            </li>
+            <li className="text-medium text-xl py-[10px]">
+              <Link onClick={closeMenu} className={styles.link} href="#about">
+                {" "}
+                About{" "}
+              </Link>
+            </li>
+            <li className="text-medium text-xl py-[10px]">
+              <Link onClick={closeMenu} className={styles.link} href="#gallery">
+                {" "}
+                Gallery{" "}
+              </Link>
+            </li>
+            <li className="text-medium text-xl py-[10px]">
+              <Link onClick={closeMenu} className={styles.link} href="#book_table">
+                {" "}
+                Book-Table{" "}
+              </Link>
+            </li>
+            <li className="text-medium text-xl py-[10px]">
+              <Link onClick={closeMenu} className={styles.link} href="#blog">
+                {" "}
+                Blog{" "}
+              </Link>
+            </li>
+            <li className="text-medium text-xl py-[10px]">
+              <Link onClick={closeMenu} className={styles.link} href="#reviews">
+                {" "}
+                Reviews{" "}
+              </Link>
+            </li>
+            <li className="text-medium text-xl py-[10px]">
+              <Link onClick={closeMenu} className={styles.link} href="#contact_us">
+                {" "}
+                Contact Us{" "}
+              </Link>
+            </li>
+          </ul>
+          <span
+            className="text-4xl fixed right-5 top-1 cursor-pointer hover:text-red-500"
+            onClick={closeMenu}
+          >
+            &times;
+          </span>
+        </div>
+      )}
     </header>
   );
 }

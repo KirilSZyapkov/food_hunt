@@ -3,7 +3,7 @@ import styles from "./BookTable.module.css";
 
 function BookTable() {
   return (
-    <section className={styles.book_table}>
+    <section className={styles.book_table} id="book_table">
       <div className={`w-full px-[120px] py-[50px] ${styles.book_container}`}>
         <h2 className="text-7xl mb-12 font-medium">BOOK A TABLE</h2>
         <form className={styles.book_table_form}>

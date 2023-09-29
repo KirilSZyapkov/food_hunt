@@ -1,11 +1,10 @@
 import React from "react";
-import SetionWrapper from "@/hoc/SetionWrapper";
 
 import styles from "./About.module.css";
 
 function About() {
   return (
-    <section className={styles.about_container}>
+    <section className={styles.about_container} id="about">
       <div className="flex justify-center mr-[-15px] ml-[-15px] h-full">
         <div className={styles.about_img}></div>
         <div className={styles.col_txt}>
@@ -49,4 +48,4 @@ function About() {
   );
 }
 
-export default SetionWrapper(About, "about");
+export default About;
