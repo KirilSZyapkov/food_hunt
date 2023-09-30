@@ -1,4 +1,5 @@
 
+import Navbar from "@/components/navbar/Navbar";
 import About from "../components/about/About";
 import Blog from "../components/blog/Blog";
 import BookTable from "../components/bookTable/BookTable";
@@ -10,6 +11,7 @@ import Reviews from "../components/reviews/Reviews";
 export default function Home() {
   return (
     <>
+    <Navbar />
       <Landing />
       <About />
       <Gallery />
