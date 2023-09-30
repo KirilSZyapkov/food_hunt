@@ -1,0 +1,7 @@
+
+@media (max-width: 1495px){
+
+    .details_container{
+        flex-direction: column;
+    }
+}
