@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Gallery.module.css";
 import { fetchRecipes, fetchRecipesByName } from "@/service";
 import Link from "next/link";
+import Image from "next/image";
 
 function Gallery() {
   const [recipes, setRecipes] = useState([]);
@@ -62,7 +63,7 @@ function Gallery() {
                 <div className={styles.overlay}>
                   <span className="text-8xl text-slate-50">&#43;</span>
                 </div>
-                <img src={it.thumbnail_url} alt="recepie" />
+                <Image src={it.thumbnail_url} alt="recepie" width={530} height={530}/>
               </Link>
             ))}
           </>

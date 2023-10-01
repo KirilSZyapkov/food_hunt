@@ -3,6 +3,7 @@ import { fetchRecipeData } from "../../service/index";
 import Link from "next/link";
 
 import styles from "./styles.module.css";
+import Image from "next/image";
 
 async function recipe({ params }: any) {
   const id = params.id;
@@ -17,11 +18,15 @@ async function recipe({ params }: any) {
       </Link>
 
       <div className="text-7xl pt-[55px]">{recipe.name}</div>
-      <div className={`flex justify-evenly pt-[70px] w-full px-[50px] gap-[55px] mb-[50px] ${styles.details_container}`}>
-        <img
+      <div
+        className={`flex justify-evenly pt-[70px] w-full px-[50px] gap-[55px] mb-[50px] ${styles.details_container}`}
+      >
+        <Image
           src={recipe.thumbnail_url}
           alt="picture"
           className="max-w-[750px] max-h-[750px] inline-block"
+          width={750}
+          height={750}
         />
         <div>
           <h2 className="text-4xl text-medium text-center pb-[35px] decoration-2">
@@ -29,7 +34,9 @@ async function recipe({ params }: any) {
           </h2>
           <ul className="text-3xl flex flex-col gap-[10px]">
             {ingredients.map((i: any) => (
-              <li className={`list-disc ${styles.li_style}`} key={i.id}>{i.raw_text}</li>
+              <li className={`list-disc ${styles.li_style}`} key={i.id}>
+                {i.raw_text}
+              </li>
             ))}
           </ul>
         </div>

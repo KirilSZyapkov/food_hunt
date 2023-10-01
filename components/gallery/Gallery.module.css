@@ -54,7 +54,7 @@
 }
 
 .card img {
-  object-fit: cover;
+  object-fit: cover !important;
 }
 
 @media (max-width: 992px) {

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 
 import styles from "./Navbar.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 function Navbar() {
   const [scrollPos, setScrollPos] = useState(0);
@@ -67,11 +68,13 @@ function Navbar() {
           </Link>
         </div>
         <Link href="/" className={styles.nav_brand}>
-          <img
+          <Image
             id="navLogo"
             className={`${styles.nav_logo} ${afixLogo ? styles.afix_logo : ""}`}
-            src="./logo.svg"
+            src="/logo.svg"
             alt="logo"
+            width={130}
+            height={130}
           />
           <span
             id="navTxt"

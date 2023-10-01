@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Blog.module.css";
 import { fetchFeeds } from "@/service";
+import Image from "next/image";
 
 async function Blog() {
   const feeds = await fetchFeeds();
@@ -11,7 +12,7 @@ async function Blog() {
       <div className={styles.carosel}>
         {feeds.results.map((f: any) => (
           <figure className={styles.snip1574} key={f.item.id}>
-            <img src={f.item.thumbnail_url} alt="profile-sample2" />
+            <Image src={f.item.thumbnail_url} alt="profile-sample2" width={300} height={100}/>
             <figcaption>
               <blockquote>
                 <p className={styles.description}>{f.item.description}</p>
