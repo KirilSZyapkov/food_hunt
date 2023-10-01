@@ -6,7 +6,7 @@ import styles from "./Navbar.module.css";
 import Link from "next/link";
 
 function Navbar() {
-  const [scrollTop, setScrollTop] = useState(0);
+  const [scrollPos, setScrollPos] = useState(0);
   const [afix, setAfix] = useState(false);
   const [afixLogo, setAfixLogo] = useState(false);
   const [afixTxt, setAfixTxt] = useState(false);
@@ -20,26 +20,25 @@ function Navbar() {
     setIsOpen(true);
   }
 
+  useEffect(()=>{
+    scrollFunction();
+  },[]);
+
   useEffect(() => {
     window.addEventListener("scroll", scrollFunction);
-    window.addEventListener("resize", scrollFunction);
-
+  
     return () => {
       window.removeEventListener("scroll", scrollFunction);
     };
-  }, []);
+  }, [scrollPos]);
   function scrollFunction() {
     const htmlElement = document.documentElement;
-    const percentScroll = htmlElement.scrollTop / htmlElement.clientHeight;
-    const scrollPosition = Math.min(percentScroll*100, 10);
-    console.log(scrollPosition);
+    const percentScroll = (htmlElement.scrollTop / htmlElement.clientHeight)*100;
+    const scrollPosition = Math.min(percentScroll, 10);
     
-    setScrollTop(scrollPosition);
+    setScrollPos(scrollPosition);
 
-    console.log(scrollTop);
-    if (
-      scrollPosition >= 10
-    ) {
+    if (scrollPosition >= 10) {
       setAfix(true);
       setAfixLogo(true);
       setAfixTxt(true);
@@ -49,7 +48,6 @@ function Navbar() {
       setAfixTxt(false);
     }
   }
-  
 
   return (
     <header className={`${styles.header_menu} ${afix ? styles.afix : ""}`}>
@@ -126,7 +124,11 @@ function Navbar() {
               </Link>
             </li>
             <li className="text-medium text-xl py-[10px]">
-              <Link onClick={closeMenu} className={styles.link} href="#book_table">
+              <Link
+                onClick={closeMenu}
+                className={styles.link}
+                href="#book_table"
+              >
                 {" "}
                 Book-Table{" "}
               </Link>
@@ -144,7 +146,11 @@ function Navbar() {
               </Link>
             </li>
             <li className="text-medium text-xl py-[10px]">
-              <Link onClick={closeMenu} className={styles.link} href="#contact_us">
+              <Link
+                onClick={closeMenu}
+                className={styles.link}
+                href="#contact_us"
+              >
                 {" "}
                 Contact Us{" "}
               </Link>
