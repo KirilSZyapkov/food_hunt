@@ -21,7 +21,7 @@ async function recipe({ params }: any) {
         <img
           src={recipe.thumbnail_url}
           alt="picture"
-          className="max-w-[750px] max-h-[750px]"
+          className="max-w-[750px] max-h-[750px] inline-block"
         />
         <div>
           <h2 className="text-4xl text-medium text-center pb-[35px] decoration-2">
@@ -29,7 +29,7 @@ async function recipe({ params }: any) {
           </h2>
           <ul className="text-3xl flex flex-col gap-[10px]">
             {ingredients.map((i: any) => (
-              <li className="list-disc" key={i.id}>{i.raw_text}</li>
+              <li className={`list-disc ${styles.li_style}`} key={i.id}>{i.raw_text}</li>
             ))}
           </ul>
         </div>

@@ -3,5 +3,10 @@
 
     .details_container{
         flex-direction: column;
+        align-items: center;
+    }
+
+    .li_style{
+        list-style: none;
     }
 }
