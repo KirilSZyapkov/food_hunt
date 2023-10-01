@@ -19,7 +19,6 @@ function Gallery() {
       } else {
         const data = await fetchRecipesByName(query);
         setRecipes((prev) => (prev = data));
-
       }
       setIsLoading(false);
     }
@@ -51,7 +50,11 @@ function Gallery() {
       </form>
       <div className="flex flex-wrap bg-[#343a40]">
         {isLoading ? (
-          <h1 className="w-full text-white text-center py-[50px] text-7xl">Loading recipes...</h1>
+          <h1 className="w-full text-white text-center py-[50px] text-7xl">
+            Loading recipes...
+          </h1>
+        ) : recipes.length === 0 ? (
+          <h1 className="w-full text-white text-center py-[50px] text-7xl">No recipes found!</h1>
         ) : (
           <>
             {recipes.map((it: any) => (
