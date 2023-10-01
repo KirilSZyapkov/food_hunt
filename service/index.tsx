@@ -60,7 +60,7 @@ export async function fetchRecipeData(id: string) {
 
 export async function fetchRecipesByName(recipeName: string) {
   const url =
-    `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeName}`;
+    `https://tasty.p.rapidapi.com/recipes/list?from=0&size=100&q=${recipeName}`;
   const options = {
     method: "GET",
     headers: {

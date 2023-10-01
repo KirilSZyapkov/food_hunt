@@ -8,16 +8,20 @@ import Link from "next/link";
 function Gallery() {
   const [recipes, setRecipes] = useState([]);
   const [query, setQuery] = useState("");
-  
+  const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     async function fetch() {
+      setIsLoading(true);
       if (query === "") {
-        const data = await fetchRecipes();        
+        const data = await fetchRecipes();
         setRecipes((prev) => (prev = data));
       } else {
         const data = await fetchRecipesByName(query);
         setRecipes((prev) => (prev = data));
+
       }
+      setIsLoading(false);
     }
     fetch();
   }, [query]);
@@ -46,14 +50,20 @@ function Gallery() {
         </button>
       </form>
       <div className="flex flex-wrap bg-[#343a40]">
-        {recipes.map((it: any) => (
-          <Link href={`${it.id}`} className={styles.card} key={it.id}>
-            <div className={styles.overlay}>
-              <span className="text-8xl text-slate-50">&#43;</span>
-            </div>
-            <img src={it.thumbnail_url} alt="recepie" />
-          </Link>
-        ))}
+        {isLoading ? (
+          <h1 className="w-full text-white text-center py-[50px] text-7xl">Loading recipes...</h1>
+        ) : (
+          <>
+            {recipes.map((it: any) => (
+              <Link href={`${it.id}`} className={styles.card} key={it.id}>
+                <div className={styles.overlay}>
+                  <span className="text-8xl text-slate-50">&#43;</span>
+                </div>
+                <img src={it.thumbnail_url} alt="recepie" />
+              </Link>
+            ))}
+          </>
+        )}
       </div>
     </>
   );
