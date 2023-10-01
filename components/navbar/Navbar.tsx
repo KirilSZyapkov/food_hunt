@@ -6,6 +6,7 @@ import styles from "./Navbar.module.css";
 import Link from "next/link";
 
 function Navbar() {
+  const [scrollTop, setScrollTop] = useState(0);
   const [afix, setAfix] = useState(false);
   const [afixLogo, setAfixLogo] = useState(false);
   const [afixTxt, setAfixTxt] = useState(false);
@@ -21,15 +22,23 @@ function Navbar() {
 
   useEffect(() => {
     window.addEventListener("scroll", scrollFunction);
+    window.addEventListener("resize", scrollFunction);
 
     return () => {
       window.removeEventListener("scroll", scrollFunction);
     };
   }, []);
   function scrollFunction() {
+    const htmlElement = document.documentElement;
+    const percentScroll = htmlElement.scrollTop / htmlElement.clientHeight;
+    const scrollPosition = Math.min(percentScroll*100, 10);
+    console.log(scrollPosition);
+    
+    setScrollTop(scrollPosition);
+
+    console.log(scrollTop);
     if (
-      document.body.scrollTop > 80 ||
-      document.documentElement.scrollTop > 80
+      scrollPosition >= 10
     ) {
       setAfix(true);
       setAfixLogo(true);
@@ -40,6 +49,7 @@ function Navbar() {
       setAfixTxt(false);
     }
   }
+  
 
   return (
     <header className={`${styles.header_menu} ${afix ? styles.afix : ""}`}>
