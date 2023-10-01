@@ -13,7 +13,7 @@ export async function fetchRecipes() {
       options
     );
     const result = await response.json();
-    return result;
+    return result.results;
   } catch (error) {
     console.error(error);
   }
@@ -53,6 +53,26 @@ export async function fetchRecipeData(id: string) {
     const response = await fetch(url, options);
     const result = await response.json();
     return result;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function fetchRecipesByName(recipeName: string) {
+  const url =
+    `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeName}`;
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "2398b9f22emshef5491088782044p16bf06jsn430e9585cd66",
+      "X-RapidAPI-Host": "tasty.p.rapidapi.com",
+    },
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    return result.results;
   } catch (error) {
     console.error(error);
   }

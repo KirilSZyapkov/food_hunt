@@ -1,24 +1,52 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import styles from "./Gallery.module.css";
-import { fetchRecipes } from "@/service";
+import { fetchRecipes, fetchRecipesByName } from "@/service";
 import Link from "next/link";
 
-async function Gallery() {
-  const someRecipies = await fetchRecipes();
+function Gallery() {
+  const [recipes, setRecipes] = useState([]);
+  const [query, setQuery] = useState("");
+  
+  useEffect(() => {
+    async function fetch() {
+      if (query === "") {
+        const data = await fetchRecipes();        
+        setRecipes((prev) => (prev = data));
+      } else {
+        const data = await fetchRecipesByName(query);
+        setRecipes((prev) => (prev = data));
+      }
+    }
+    fetch();
+  }, [query]);
+
+  function handleSubmit(e: any) {
+    e.preventDefault();
+    const target = e.target;
+    setQuery(target.search.value);
+  }
 
   return (
     <>
-      <div className="text-center bg-[#343a40] text-[#f8f9fa] min-h-[300px] flex flex-col justify-center" id="gallery">
+      <div
+        className="text-center bg-[#343a40] text-[#f8f9fa] min-h-[300px] flex flex-col justify-center"
+        id="gallery"
+      >
         <h2 className="text-7xl mb-2 font-medium mt-0">OUR MENU</h2>
       </div>
-      <form className={`${styles.form} bg-[#343a40] text-center`}>
+      <form
+        className={`${styles.form} bg-[#343a40] text-center`}
+        onSubmit={handleSubmit}
+      >
         <input type="text" placeholder="Search.." name="search" />
         <button className={styles.search_btn} type="submit">
           <i className="uil uil-search text-xl"></i>
         </button>
       </form>
       <div className="flex flex-wrap bg-[#343a40]">
-        {someRecipies?.results.map((it: any) => (
+        {recipes.map((it: any) => (
           <Link href={`${it.id}`} className={styles.card} key={it.id}>
             <div className={styles.overlay}>
               <span className="text-8xl text-slate-50">&#43;</span>
