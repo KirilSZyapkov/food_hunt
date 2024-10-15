@@ -13,9 +13,9 @@ async function Blog() {
         {feeds.results.map((f: any) => (
           <figure className={styles.snip1574} key={f.item.id}>
             <Image src={f.item.thumbnail_url} alt="profile-sample2" width={300} height={100}/>
-            <figcaption>
+            <figcaption className={styles.description}>
               <blockquote>
-                <p className={styles.description}>{f.item.description}</p>
+                <p>{f.item.description}</p>
               </blockquote>
               <h3>{f.item.name}</h3>
               <h5>Founder</h5>
