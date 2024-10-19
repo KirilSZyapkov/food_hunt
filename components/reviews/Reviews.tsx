@@ -3,7 +3,7 @@ import styles from "./Reviews.module.css";
 
 function Reviews() {
   return (
-    <section className="min-h-[500px] flex flex-col justify-center text-white bg-[#343a40] w-full pt-[15px]" id="reviews">
+    <section className="min-h-[500px] flex flex-col justify-center text-white bg-[#343a40] w-full pt-[15px] overflow-hidden px-3" id="reviews">
       <h2 className="text-7xl text-center my-[3rem] font-medium">REVIEWS</h2>
       <div className={styles.row}>
         <div className={styles.col}>
